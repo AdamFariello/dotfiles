@@ -1,0 +1,23 @@
+dc() {
+        cd $1
+        clear
+        ls
+}
+alias cdd=dc
+
+yt-dlp-video () {
+        # This bash function does not check for quotations properly     
+        # I don't think you need to add quotes to "mp4" and "all 
+        flags="-f mp4 --embed-thumbnail --embed-chapters"
+        for link in "$@" ; do
+                yt-dlp $flags ${link} --sponsorblock-mark all
+        done
+}
+alias yt-dlp-videos="yt-dlp-video"
+yt-dlp-album () {
+        flags = "-x --audio-format mp3 --embed-thumbnail --add-metadata"
+        for link in "$@" ; do
+                yt-dlp $flags -o "./%(playlist)s/%(title)s.%(ext)s" $(link)
+        done
+}
+alias yt-dlp-album="albums"
