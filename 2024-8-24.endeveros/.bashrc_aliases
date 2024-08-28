@@ -1,0 +1,19 @@
+alias sudo="sudo "
+
+#alias mysql="/usr/bin/mariadb"
+alias mysql="mariadb "
+
+alias arch="wiki-search "
+alias wiki="wikit" 
+
+alias update_grub="grub-mkconfig -o /boot/grub/grub.cfg"
+alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias journalctl-now="journalctl -r --since=yesterday --until=now"
+alias flush_cache="rndc reconfig"
+alias flush_dns="flush_cache"
+
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
+
+alias pokemon="pokemon-colorscripts "
