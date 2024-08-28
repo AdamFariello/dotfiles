@@ -8,8 +8,8 @@ alias cdd=dc
 
 # yt-dlp Functions
 yt-dlp-video () {
-        # This bash function does not check for quotations properly     
-        # I don't think you need to add quotes to "mp4" and "all 
+        # This bash function does not check for quotations properly
+        # I don't think you need to add quotes to "mp4" and "all
         flags="-f mp4 --embed-thumbnail --embed-chapters"
         for link in "$@" ; do
                 yt-dlp $flags ${link} --sponsorblock-mark all
@@ -26,8 +26,8 @@ yt-dlp-album () {
 alias yt-dlp-albums="yt-dlp-album "
 
 yt-dlp-music () {
-	# yt-dl -x --audio-format mp3 --embed-thumbnail --add-metadata -o "./%(playlist)s/%(title)s.%(ext)s"	
-	flags="-x --audio-format mp3 --embed-thumbnail --add-metadata"	
+	# yt-dl -x --audio-format mp3 --embed-thumbnail --add-metadata -o "./%(playlist)s/%(title)s.%(ext)s"
+	flags="-x --audio-format mp3 --embed-thumbnail --add-metadata"
 	for link in "$@" ; do
 		yt-dlp $flags -o "./%(title)s.%(ext)s" ${link}
 	done
