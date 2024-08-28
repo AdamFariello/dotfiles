@@ -5,6 +5,8 @@ dc() {
 }
 alias cdd=dc
 
+
+# yt-dlp Functions
 yt-dlp-video () {
         # This bash function does not check for quotations properly     
         # I don't think you need to add quotes to "mp4" and "all 
@@ -13,11 +15,21 @@ yt-dlp-video () {
                 yt-dlp $flags ${link} --sponsorblock-mark all
         done
 }
-alias yt-dlp-videos="yt-dlp-video"
+alias yt-dlp-videos="yt-dlp-video "
+
 yt-dlp-album () {
         flags = "-x --audio-format mp3 --embed-thumbnail --add-metadata"
         for link in "$@" ; do
-                yt-dlp $flags -o "./%(playlist)s/%(title)s.%(ext)s" $(link)
+                yt-dlp $flags -o "./%(playlist)s/%(title)s.%(ext)s" ${link}
         done
 }
-alias yt-dlp-album="albums"
+alias yt-dlp-albums="yt-dlp-album "
+
+yt-dlp-music () {
+	# yt-dl -x --audio-format mp3 --embed-thumbnail --add-metadata -o "./%(playlist)s/%(title)s.%(ext)s"	
+	flags="-x --audio-format mp3 --embed-thumbnail --add-metadata"	
+	for link in "$@" ; do
+		yt-dlp $flags -o "./%(title)s.%(ext)s" ${link}
+	done
+}
+alias yt-dlp-musics="yt-dlp-music "
