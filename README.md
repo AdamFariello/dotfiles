@@ -13,8 +13,8 @@ DateAdded.OperatingSystem
 ### Road
 This repository won't be updated much.   
 - [X] Upload bash files   
-- [ ] Upload vim dotfiles   
-&nbsp;&nbsp;&nbsp;&nbsp; - [ ] Learn vim   
+- [X] Upload vim dotfiles   
+- [X] Upload SynthShell configs
 - [ ] Upload directories    
 &nbsp;&nbsp;&nbsp;&nbsp; - [ ] Figure out if I want to backup dot directories   
 &nbsp;&nbsp;&nbsp;&nbsp; - [ ] Create, or find, a program that duplicates a file hiearchy, but every file is hardlinked   
